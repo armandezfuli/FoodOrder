@@ -1,0 +1,64 @@
+{
+    "main_course": [
+        {
+            "id": "1",
+            "title": "Pizza",
+            "price": 99,
+            "available": true,
+            "description": "Delicious cheese pizza with fresh ingredients.",
+            "image": "https://tse3.mm.bing.net/th?id=OIP.1SW3Oec7UhoeX1mG3p8HXAHaIb&pid=Api"
+        },
+        {
+            "id": "2",
+            "title": "Hamburger",
+            "price": 89,
+            "available": true,
+            "description": "Juicy beef hamburger with fresh lettuce and tomato.",
+            "image": "https://tse4.mm.bing.net/th?id=OIP.03WC4sZxxv3MU8gzDwS-owHaE8&pid=Api"
+        },
+        {
+            "id": "3",
+            "title": "Hot Dog",
+            "price": 79,
+            "available": false,
+            "description": "Tasty hot dog with mustard and ketchup.",
+            "image": "https://tse3.mm.bing.net/th?id=OIP.tCMxI7Y0ho8Gxjrs_UO3qQHaGz&pid=Api"
+        }
+    ],
+    "appetizer": [
+        {
+            "id": "11",
+            "title": "Salad",
+            "price": 39,
+            "available": true,
+            "description": "Fresh garden salad with a variety of vegetables.",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+        },
+        {
+            "id": "12",
+            "title": "Potato",
+            "price": 39,
+            "available": true,
+            "description": "Crispy and golden fried potatoes.",
+            "image": "https://tse3.mm.bing.net/th?id=OIP._xi8IEx95trdWcxHIXHcSAHaF7&pid=Api"
+        }
+    ],
+    "dessert": [
+        {
+            "id": "21",
+            "title": "Cake",
+            "price": 29,
+            "available": true,
+            "description": "Soft and fluffy chocolate cake.",
+            "image": "https://tse2.mm.bing.net/th?id=OIP.eEoZp85fTny6NdrQuZ1s1QHaHa&pid=Api"
+        },
+        {
+            "id": "22",
+            "title": "Candies",
+            "price": 18,
+            "available": false,
+            "description": "A mix of sweet and sour candies.",
+            "image": "https://tse1.mm.bing.net/th?id=OIP.Au8j4cu5g6M9LMl7fGBsswHaHa&pid=Api"
+        }
+    ]
+}
