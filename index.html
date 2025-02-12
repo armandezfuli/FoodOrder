@@ -1,16 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Ourder</title>
-    <script type="module" src="/src/app.ts"></script>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Food Order</title>
+        <script type="module" src="/src/app.ts"></script>
+    </head>
+    <body class="bg-[#212529] text-[#f1f3f5]">
+        <header class="">
+            <nav class="w-full h-16 bg-[#343a40] flex items-center px-8 justify-between">
+                <div class="text-[#dee2e6] text-3xl font-bold">Food Order</div>
+                <div class="relative cursor-pointer">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="size-9 stroke-[#f8f9fa]">
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                    </svg>
+                    <span
+                        class="absolute bottom-[-0.1rem] right-[-0.5rem] bg-red-500 rounded-full flex items-center justify-center font-semibold text-base px-1 text-white"
+                        >12</span
+                    >
+                </div>
+            </nav>
+        </header>
 
-    <div id="root" class="text-2xl text-gray-600">test</div>
+        <main class="my-10 flex flex-col items-center">
+            <section class="flex justify-center gap-x-5 px-2">
+                <!--filter and sort-->
+                <div class="flex items-center">
+                    <!--Food type-->
+                    <label for="select_type" class="mr-2">Food Type</label>
+                    <select
+                        id="select_type"
+                        class="bg-[#343a40] p-2 text-base rounded-lg text-[#e9ecef] outline-none cursor-pointer border border-[#495057] focus:border-[#868e96] w-24 sm:w-40"
+                        name="">
+                        <option selected>All</option>
+                        <option>Main Course</option>
+                        <option>Appetizer</option>
+                        <option>Dessert</option>
+                    </select>
+                </div>
 
-    <h1 class="text-3xl text-blue-700 font-bold">Tailwind در حال کار است! 🎉</h1>
-    
-</body>
+                <div class="flex items-center">
+                    <!--Food type-->
+                    <label for="select_sort" class="mr-2">Sort by</label>
+                    <select
+                        id="select_sort"
+                        class="bg-[#343a40] p-2 text-base rounded-lg text-[#e9ecef] outline-none cursor-pointer border border-[#495057] focus:border-[#868e96] w-24 sm:w-40"
+                        name="">
+                        <option selected>Heigh price to low</option>
+                        <option>Low price to Heigh</option>
+                    </select>
+                </div>
+            </section>
+
+            <section
+                class="px-3 mt-8 grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-[1024px] gap-4">
+                <!--Cards-->
+                <div class="flex-col justify-between pb-3 bg-[#343a40] rounded-md">
+                    <!--Card-->
+                    <div class="w-full">
+                        <img
+                            class="rounded-md"
+                            src="https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+                            alt="" />
+                    </div>
+                    <div class="flex-col px-3">
+                        <h2 class="mt-3 font-medium text-lg">Salad</h2>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="text-base font-semibold text-[#ffec99]"
+                                >39$</span
+                            >
+                            <span
+                                class="cursor-pointer font-semibold bg-[#212529] p-2 border border-[#212529] rounded-full hover:bg-[#343a40]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-col justify-between pb-3 bg-[#343a40] rounded-md">
+                    <!--Card-->
+                    <div class="w-full">
+                        <img
+                            class="rounded-md"
+                            src="https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+                            alt="" />
+                    </div>
+                    <div class="flex-col px-3">
+                        <h2 class="mt-3 font-medium text-lg">Salad</h2>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="text-base font-semibold text-[#ffec99]"
+                                >39$</span
+                            >
+                            <span
+                                class="cursor-pointer font-semibold bg-[#212529] p-2 border border-[#212529] rounded-full hover:bg-[#343a40]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col justify-between pb-3 bg-[#343a40] rounded-md">
+                    <!--Card-->
+                    <div class="w-full">
+                        <img
+                            class="rounded-md"
+                            src="https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+                            alt="" />
+                    </div>
+                    <div class="flex-col px-3">
+                        <h2 class="mt-3 font-medium text-lg">Salad</h2>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="text-base font-semibold text-[#ffec99]"
+                                >39$</span
+                            >
+                            <span
+                                class="cursor-pointer font-semibold bg-[#212529] p-2 border border-[#212529] rounded-full hover:bg-[#343a40]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col justify-between pb-3 bg-[#343a40] rounded-md">
+                    <!--Card-->
+                    <div class="w-full">
+                        <img
+                            class="rounded-md"
+                            src="https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+                            alt="" />
+                    </div>
+                    <div class="flex-col px-3">
+                        <h2 class="mt-3 font-medium text-lg">Salad</h2>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="text-base font-semibold text-[#ffec99]"
+                                >39$</span
+                            >
+                            <span
+                                class="cursor-pointer font-semibold bg-[#212529] p-2 border border-[#212529] rounded-full hover:bg-[#343a40]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-col justify-between pb-3 bg-[#343a40] rounded-md">
+                    <!--Card-->
+                    <div class="w-full">
+                        <img
+                            class="rounded-md"
+                            src="https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+                            alt="" />
+                    </div>
+                    <div class="flex-col px-3">
+                        <h2 class="mt-3 font-medium text-lg">Salad</h2>
+                        <div class="flex justify-between items-center mt-3">
+                            <span class="text-base font-semibold text-[#ffec99]"
+                                >39$</span
+                            >
+                            <span
+                                class="cursor-pointer font-semibold bg-[#212529] p-2 border border-[#212529] rounded-full hover:bg-[#343a40]">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke-width="1.5"
+                                    stroke="currentColor"
+                                    class="size-6">
+                                    <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
