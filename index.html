@@ -7,29 +7,106 @@
         <script type="module" src="/src/app.ts"></script>
     </head>
     <body class="bg-[#212529] text-[#f1f3f5]">
-        <header class="">
+
+        <!-- <header class="relative">
             <nav class="w-full h-16 bg-[#343a40] flex items-center px-8 justify-between">
                 <div class="text-[#dee2e6] text-3xl font-bold">Food Order</div>
-                <div class="relative cursor-pointer">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke-width="1.5"
-                        stroke="currentColor"
-                        class="size-9 stroke-[#f8f9fa]">
-                        <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
-                    </svg>
+        
+                <div class="relative group">
+                    <div class="cursor-pointer py-4">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="size-9 stroke-[#f8f9fa]">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </div>
                     <span
-                        class="absolute bottom-[-0.1rem] right-[-0.5rem] bg-red-500 rounded-full flex items-center justify-center font-semibold text-base px-1 text-white"
-                        >12</span
-                    >
+                        class="absolute bottom-3 right-[-0.5rem] bg-red-500 rounded-full flex items-center justify-center font-semibold text-base px-1 text-white">12</span>
+        
+                    <div class="absolute w-[300px] h-96 bg-[#212529] top-16 right-[-20px] border-2 shadow-xl border-[#868e96] 
+                        rounded-md overflow-hidden 
+                        opacity-0 scale-y-0 origin-top transition-all duration-300 group-hover:opacity-100 group-hover:scale-y-100">
+                        <p class="text-white p-4">سبد خرید شما</p>
+                    </div>
+                </div>
+            </nav>
+        </header> -->
+
+        <header class="relative">
+            <nav class="w-full h-16 bg-[#343a40] flex items-center px-8 justify-between">
+                <div class="text-[#dee2e6] text-3xl font-bold">Food Order</div>
+                <div class="relative group">
+                    <input type="checkbox" id="cart-toggle" class="peer hidden" />
+                    <label for="cart-toggle" class="cursor-pointer py-4 block">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="size-9 stroke-[#f8f9fa]">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
+                        </svg>
+                    </label>
+                    <span class="absolute bottom-3 right-[-0.5rem] bg-red-500 rounded-full flex items-center justify-center 
+                        font-semibold text-base px-1 text-white">
+                        12
+                    </span>
+                    <div class="absolute w-80 bg-[#212529] top-16 right-2 border-2 shadow-2xl shadow-gray-900/70 border-[#868e96] 
+                        rounded-l-xl rounded-br-xl overflow-hidden 
+                        opacity-0 scale-y-0 origin-top transition-all duration-300 
+                        group-hover:opacity-100 group-hover:scale-y-100 
+                        peer-checked:opacity-100 peer-checked:scale-y-100">
+                        <div class="p-4 text-white">
+                            <div>Your shopping cart is empty.</div>
+                        </div>
+                        <div class="flex-col ">
+                            <div class="flex items-center justify-between m-2 bg-[#343a40] rounded-md p-2">
+                                <div class="w-1/3">
+                                    <img
+                                        class="rounded-xl "
+                                        src="https://tse2.mm.bing.net/th?id=OIP.mpuTCb_nzF72ZLGWq_OWXAHaFx&pid=Api"
+                                        alt="" />
+                                </div>
+
+                                <div class="flex-col">
+                                    <h2 class="font-medium text-md mb-2">Salad</h2>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-md font-semibold text-[#ffec99]">39$</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center justify-center gap-3">
+                                    <button class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#ced4da] hover:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                          </svg>                                          
+                                    </button>
+                                    <span class="text-xl text-[#f8f9fa]">1</span>
+                                    <button class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-[#ced4da]  hover:text-white">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                          </svg>                                          
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full h-10 bg-[#343a40] flex items-center justify-between p-4">
+                            <div class="flex items-center justify-between gap-4">
+                                <h6 class="text-[#f8f9fa]">Total Price</h6>
+                                <h6 class="text-lg font-semibold text-[#ffec99]">125$</h6>
+                            </div>
+                            <button class="text-sm text-[#ff6b6b] hover:text-[#fa5252]">Delete All</button>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </header>
+        
+        
 
         <main class="my-10 flex flex-col items-center">
             <section class="flex justify-center gap-x-5 px-2">
